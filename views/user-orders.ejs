@@ -1,0 +1,49 @@
+
+        <!-- Cart Start -->
+        <div class="cart-page">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="cart-page-inner">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>Product Name</th>
+                                            <th>Price</th>
+                                            <th>User Id</th>
+                                            <th>User Name</th>
+                                        </tr>
+                                    </thead>
+                                    <% if(typeof details != 'undefined') { %>
+                                    <% details.forEach(function(item){ %>
+                                        
+                                    <tbody class="align-middle">
+                                        <tr>
+                                            <td>
+                                                <%= item.title %>
+                                            </td>
+                                            <td>
+                                                <%= item.price %>
+                                            </td>
+                                            <td>                     
+                                                <%= item.user_id %>
+                                            </td>
+                                            <td>        
+                                                <%= item.user_name %>
+                                            </td>
+                                        </tr>
+                                        <% }) %>
+                                        <% } %>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <!-- Cart End -->
+        
+      

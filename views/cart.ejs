@@ -1,0 +1,78 @@
+
+        
+        <!-- Cart Start -->
+        <div class="cart-page">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="cart-page-inner">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>Product</th>
+                                            <th>Price</th>
+                                            <th>Quantity</th>
+                                
+                                        </tr>
+                                    </thead>
+                                    <% total=0 %>
+
+                                    <% details.forEach(function(item){ %>
+                                        
+                                    <tbody class="align-middle">
+                                        <tr>
+                                            <td>
+                                                <div class="img">
+                                                   
+                                                <p><%= item.title %></p>
+                                    
+                                                </div>
+                                            </td>
+                                            <td><%= item.price %></td>
+                                           
+                                            <td>
+                                                <div class="qty">
+                                                   
+                                                    <input type="text" value="1">                                               
+                                                    
+                                                </div>
+                                            </td>
+                                            
+                                            <% total=total+item.price %>
+                                        </tr>
+                                        <% }) %>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="cart-page-inner">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="cart-summary">
+                                        <div class="cart-content">
+                                            <h1>Cart Summary</h1>
+                                            <p>Sub Total<span>$<%= total %></span></p>
+                                            <p>Shipping Cost<span>$1</span></p>
+                                            <h2>Grand Total<span><%= total+1 %></span></h2>
+                                        </div>
+                                        <div class="cart-btn">
+                                            <form action="ordered" method="POST">
+                                                <a>  <button name="booktitle" class="btn" type="submit" value="">Checkout</a>
+                                                </button>
+                                                </form>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Cart End -->
+        
+      
